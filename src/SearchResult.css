@@ -1,0 +1,16 @@
+ .result-div{
+  padding: 5px;
+ margin: 2rem;
+
+ background-color:#efefef;
+
+ height: 200px;
+} 
+
+
+@media screen and (max-width: 400px) {
+    .result-div{
+       margin-left: 16PX; 
+       margin-right: 16px;
+    }
+}

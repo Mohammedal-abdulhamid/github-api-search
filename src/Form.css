@@ -1,0 +1,45 @@
+
+.form{
+  
+    margin-top: 4rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+ .title{
+    margin-top: 6rem;
+ }
+ .search-bar{
+    width:30%;
+    margin-right:10px;
+    height: 30px;
+     border-radius:1% ;
+     border: 1px solid gray;
+     padding: 5px;
+}
+ .search-btn{
+    width:12%;
+    height: 42px;
+    
+     
+} 
+
+    
+@media screen and (max-width: 400px) {
+    .form{
+    display: flex;
+    flex-direction: column;
+   
+}
+.search-bar{
+    width:50%;
+    margin:16px;
+    height: 20px;
+}
+.search-btn{
+    width: 50px;;
+     height: 20px;
+     margin-left: 16px ;
+   
+}
+}

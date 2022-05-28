@@ -68,3 +68,48 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+<!-- import {React, useState} from 'react'
+import "./Form.css";
+
+function Form() {
+	const [userName, setUserName] = useState("");
+	let result = [];
+	 function fetchData() {
+	  fetch(`https://api.github.com/users`)
+			.then((res) => res.json())
+			.then((data)=> console.log(data))
+			.catch((error) => console.log(error));
+	}
+	fetchData();
+	console.log(result);
+	
+	
+	function handelSubmit(e) {
+		e.preventDefault();
+	}
+	
+
+	return (
+		<div>
+			<h1 className="title"> Favorite Programming Language</h1>
+			<div className="form">
+				<input
+					className="search-bar"
+					placeholder="Search GitHub User"
+					onChange={(e) => setUserName(e.target.value)}
+				/>
+				<button
+					type="submit"
+					className="search-btn"
+					onSubmit={(e) => handelSubmit(e)}
+				>
+					Search
+				</button>
+			</div>
+		</div>
+	);
+}
+
+export default Form; -->
