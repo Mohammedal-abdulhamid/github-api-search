@@ -1,53 +1,48 @@
 import {React, useState} from 'react'
 import "./Form.css";
-// async function fetchData() {
-// 	let result = [];
-// 	await fetch(`https://api.github.com/users/${userName}/repos`)
-// 		.then((res) => res.json())
-// 		.then((data) => (result = [...data]))
-// 		.catch((error) => console.log(error));
-// 	let languages = [];
-// 	for (let repo of result) {
-// 		languages.push(repo.language);
-// 	}
-// 	let new_arr = [];
 
-// 	languages.reduce(function (r, current_item) {
-// 		if (current_item !== r) {
-// 			new_arr.push([]);
-// 		}
-// 		new_arr[new_arr.length - 1].push(current_item);
-// 		return current_item;
-// 	}, undefined);
-// 	console.log("new array>>>>>>>>>", new_arr);
-// }
-// console.log(userName);
-// function handelSubmit(e) {
-// 	e.preventDefault();
-// }
-// fetchData(); 
-function Form() {
-	const [userName, setUserName] = useState("");
+function Form( props) {
+ const [userName, setUserName] = useState("");
+ const[result, setResult] = useState([]);
 
-	let result = [];
-	 function fetchData() {
-		 fetch(`https://api.github.com/users/${userName}/repos`)
+ async function fetchData() {
+	 let languges = [];
+		await fetch(`https://api.github.com/users/${userName}/repos`)
 			.then((res) => res.json())
-			.then((data) =>
-			  console.log(data)
-			)
+			.then((data) => {
+			 data.forEach((repo) => {
+			 languges.push(repo.language);
+			});
+			setResult(languges);
+			})
 			.catch((error) => console.log(error));
-	}
-	
+ }
+   console.log( result);
 
+    const count = {};
+   function countLanguage(){
+	result.forEach(function (i) {
+	count[i] = (count[i] || 0) + 1;
+	});
 	
-	
-	function handelSubmit(e) {
-		e.preventDefault();
+	// convert count to an arry and sort it in ascending order
+	let countArr =[];
+	for(let j in count){
+		countArr.push([j , count[j]])
 	}
-	fetchData();
+	// sorting countArr
+	countArr.sort(function (a, b) {
+		return b[1] - a[1];
+	});
+    console.log("count>>>>>>>>", countArr);
+}
 
-	return (
+ function handelSubmit() {
+   fetchData();
+  setResult([]);
+}
+	 countLanguage();
+ return (
 		<div>
 			<h1 className="title"> Favorite Programming Language</h1>
 			<div className="form">
@@ -57,9 +52,9 @@ function Form() {
 					onChange={(e) => setUserName(e.target.value)}
 				/>
 				<button
-					type="submit"
+					type="button"
 					className="search-btn"
-					onSubmit={(e) => handelSubmit(e)}
+					onClick={handelSubmit}
 				>
 					Search
 				</button>
