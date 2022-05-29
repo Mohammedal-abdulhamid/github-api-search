@@ -13,10 +13,9 @@ import Ruby from "./images/Ruby.jpg";
 import Swift from "./images/Swift.jpg";
 import Elixir from "./images/Elixir.jpg";
 
-function Form(props) {
+function Form() {
 	const [userName, setUserName] = useState("");
 	const [result, setResult] = useState([]);
-
 	async function fetchData() {
 		let languges = [];
 		await fetch(`https://api.github.com/users/${userName}/repos`)
@@ -30,20 +29,23 @@ function Form(props) {
 			.catch((error) => console.log(error));
 	}
 	console.log(result);
-
 	const count = {};
 	let newArray;
 	function countLanguage() {
 		// store each languge repeatation in count object
+
 		result.forEach(function (i) {
 			count[i] = (count[i] || 0) + 1;
 		});
+
 		// convert count to an arry and sort it
+
 		let countArr = [];
 		for (let j in count) {
 			countArr.push([j, count[j]]);
 		}
 		// sorting countArr in ascending order
+
 		countArr.sort(function (a, b) {
 			return b[1] - a[1];
 		});
@@ -56,7 +58,6 @@ function Form(props) {
 		setResult([]);
 	}
 	countLanguage();
-
 	return (
 		<div>
 			<h1 className="title"> Favorite Programming Language</h1>
@@ -76,6 +77,7 @@ function Form(props) {
 					<div className="language">
 						<p id="result-p"> {newArray[0] !== "null" && newArray[0]}</p>
 						<p id="result-p"> {newArray[0] === "null" && newArray[2]}</p>
+						<p id="result-p"> {newArray[0] === "null" && "No Result Found"}</p>
 						<div className="language-icon">
 							{(newArray[0] === "JavaScript" ||
 								newArray[2] === "JavaScript") && (
