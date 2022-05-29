@@ -1,7 +1,8 @@
 
 import './App.css';
 import Form from './Form';
-import SearchResult from './SearchResult';
+// import SearchResult from './SearchResult';
+import Footer from "./Footer"
 
 
 function App({ newArray }) {
@@ -13,6 +14,9 @@ function App({ newArray }) {
 			{/* <main className="App-main">
 				<SearchResult language={newArray} />
 			</main> */}
+			<div>
+				<Footer />
+			</div>
 		</div>
 	);
 }

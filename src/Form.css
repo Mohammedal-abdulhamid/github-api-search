@@ -21,10 +21,17 @@
  margin: 2rem;
  width: 60px;
  }
+ .footer-icons{
+ margin: 2rem;
+ width: 40px;
+ }
  .search-btn{
  width:12%;
  height: 42px;
  } 
+ #favorite{
+ font-size:25px;
+ }
  .result-div{
  padding: 5px;
  margin: 2rem;

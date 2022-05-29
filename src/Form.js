@@ -71,7 +71,7 @@ function Form(props) {
 				</button>
 			</div>
 			<div className="result-div">
-				<p> Favorite languge</p>
+				<p id="favorite"> Favorite languge</p>
 				<div className="languageUse">
 					<div className="language">
 						<p id="result-p"> {newArray[0] !== "null" && newArray[0]}</p>
