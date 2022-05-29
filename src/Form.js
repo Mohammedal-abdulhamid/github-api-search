@@ -16,10 +16,11 @@ import Elixir from "./images/Elixir.jpg";
 function Form() {
 	const [userName, setUserName] = useState("");
 	const [result, setResult] = useState([]);
+	const [userInput, setUserInput] = useState( true);
 	async function fetchData() {
 		let languges = [];
 		await fetch(`https://api.github.com/users/${userName}/repos`)
-			.then((res) => res.json())
+			.then((res) =>{res.status(400) ? setUserInput(false): res.jason()})
 			.then((data) => {
 				data.forEach((repo) => {
 					languges.push(repo.language);
@@ -70,6 +71,7 @@ function Form() {
 				<button type="button" className="search-btn" onClick={handelSubmit}>
 					Search
 				</button>
+				<div className="checkInp"> {!userInput && "User Not Found"}</div>
 			</div>
 			<div className="result-div">
 				<p id="favorite"> Favorite languge</p>
@@ -84,35 +86,37 @@ function Form() {
 								<img className="icon" src={JavaScript} alt={JavaScript} />
 							)}
 							{(newArray[0] === "HTML" || newArray[2] === "HTML") && (
-								<img className="icon" src={HTML} alt={HTML} />
+								<img className="icon" src={HTML} alt={"HTML"} />
 							)}
 							{(newArray[0] === "CSS" || newArray[2] === "CSS") && (
-								<img className="icon" src={CSS} alt={CSS} />
+								<img className="icon" src={CSS} alt={"CSS"} />
 							)}
 							{newArray[0] === "Java" && (
-								<img className="icon" src={Java} alt={Java} />
+								<img className="icon" src={Java} alt={"Java"} />
 							)}
 							{newArray[0] === "Python" && (
-								<img className="icon" src={Python} alt={Python} />
+								<img className="icon" src={Python} alt={"Python"} />
 							)}
 							{newArray[0] === "PHP" && (
-								<img className="icon" src={PHP} alt={PHP} />
+								<img className="icon" src={PHP} alt={"PHP"} />
 							)}
 							{newArray[0] === "C#" && (
-								<img className="icon" src={CSharp} alt={CSharp} />
+								<img className="icon" src={CSharp} alt={"CSharp"} />
 							)}
-							{newArray[0] === "C" && <img className="icon" src={C} alt={C} />}
+							{newArray[0] === "C" && (
+								<img className="icon" src={C} alt={"C"} />
+							)}
 							{newArray[0] === "C++" && (
-								<img className="icon" src={CPlus2} alt={CPlus2} />
+								<img className="icon" src={CPlus2} alt={"CPlus2"} />
 							)}
 							{newArray[0] === "Ruby" && (
-								<img className="icon" src={Ruby} alt={Ruby} />
+								<img className="icon" src={Ruby} alt={"Ruby"} />
 							)}
 							{newArray[0] === "Swift" && (
-								<img className="icon" src={Swift} alt={Swift} />
+								<img className="icon" src={Swift} alt={"Swift"} />
 							)}
 							{newArray[0] === "Elixir" && (
-								<img className="icon" src={Elixir} alt={Elixir} />
+								<img className="icon" src={Elixir} alt={"Elixir"} />
 							)}
 						</div>
 					</div>
