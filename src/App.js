@@ -3,15 +3,16 @@ import './App.css';
 import Form from './Form';
 import SearchResult from './SearchResult';
 
-function App() {
-  return (
+
+function App({ newArray }) {
+	return (
 		<div className="App">
 			<header className="App-header">
-				<Form />
+				<Form  />
 			</header>
-			<main className="App-main">
-				<SearchResult />
-			</main>
+			{/* <main className="App-main">
+				<SearchResult language={newArray} />
+			</main> */}
 		</div>
 	);
 }

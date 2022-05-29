@@ -1,43 +1,74 @@
 
 .form{
   
-    margin-top: 4rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
+ margin-top: 4rem;
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ }
  .title{
     margin-top: 6rem;
  }
  .search-bar{
-    width:30%;
-    margin-right:10px;
-    height: 30px;
-     border-radius:1% ;
-     border: 1px solid gray;
-     padding: 5px;
-}
+ width:30%;
+ margin-right:10px;
+ height: 30px;
+ border-radius:1% ;
+ border: 1px solid gray;
+ padding: 5px;
+ }
+ .icon{
+ margin: 2rem;
+ width: 60px;
+ }
  .search-btn{
-    width:12%;
-    height: 42px;
-} 
+ width:12%;
+ height: 42px;
+ } 
+ .result-div{
+ padding: 5px;
+ margin: 2rem;
+ background-color:#efefef;
+ height: 200px;
+ text-align: center;
+ } 
+ #result-p{
+  padding-top: 4px;
+  font-size: 35px;
+ }
+ .languageUse{
+ text-align: center;
+ width: 100%;
 
-    
+ }
+ .language{
+  background-color: #95CD41;
+  width: 80%;
+  height: 60px; 
+   margin: 1rem auto;
+ }
+
+
+ @media screen and (max-width: 400px) {
+ .result-div{
+  margin-left: 16PX; 
+  margin-right: 16px;
+  }
+ }
+
 @media screen and (max-width: 400px) {
-    .form{
-    display: flex;
-    flex-direction: column;
-   
-}
+ .form{
+ display: flex;
+ flex-direction: column;
+ }
 .search-bar{
-    width:50%;
-    margin:16px;
-    height: 20px;
-}
-.search-btn{
-    width: 50px;;
-     height: 20px;
-     margin-left: 16px ;
-   
-}
+ width:50%;
+ margin:16px;
+ height: 20px;
+ }
+ .search-btn{
+  width: 50px;;
+  height: 20px;
+  margin-left: 16px ;
+ }
 }
