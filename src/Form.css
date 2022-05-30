@@ -8,6 +8,7 @@
  }
  .title{
     margin-top: 6rem;
+    color: white;
  }
  .search-bar{
  width:30%;
@@ -16,6 +17,8 @@
  border-radius:1% ;
  border: 1px solid gray;
  padding: 5px;
+  border: none;
+   border-radius: 50px;
  }
  .icon{
  margin: 2rem;
@@ -25,10 +28,31 @@
  margin: 2rem;
  width: 40px;
  }
+
  .search-btn{
- width:12%;
+ width:13%;
+ font-weight: 600;
  height: 42px;
- } 
+ background-color: #95CD41;
+ font-size: 16px;
+ border-radius: 3%;
+ border: none;
+ border-radius: 50px;
+ background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+ box-shadow: 0 4px 15px 0 rgb(49 196 190 / 75%);
+}
+ 
+.search-btn:hover{
+ font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+    
+
+
+  
  #favorite{
  font-size:25px;
  }
@@ -36,12 +60,13 @@
  padding: 5px;
  margin: 2rem;
  background-color:#efefef;
- height: 200px;
+ height: 250px;
  text-align: center;
  } 
  #result-p{
-  padding-top: 4px;
+  padding-top: 1px ;
   font-size: 35px;
+  /* margin: 10px; */
  }
  .languageUse{
  text-align: center;
@@ -49,17 +74,30 @@
 
  }
  .language{
-  background-color: #95CD41;
   width: 80%;
   height: 60px; 
+  margin: 1rem auto;
+  text-align: center;
+  border-radius: 50px;
+  background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgb(49 196 190 / 75%);
+}
+ 
+ .userNotFound{
+   padding-top: 1rem;
+   height: 60px;
    margin: 1rem auto;
- }
+   width: 80%;
+  border-radius: 50px;
+  background-image: linear-gradient(to right, #ed6ea0, #ec8c69, #f7186a , #FBB03B);
+    box-shadow: 0 4px 15px 0 rgb(236 116 149 / 75%);
+}
+ 
 
-
+ 
 @media screen and (max-width: 400px) {
- .form{
- display: flex;
- flex-direction: column;
+ .form{ display: flex;
+  flex-direction: column;
  }
   .title{
     margin-top: 3rem;
@@ -74,8 +112,12 @@
  height: 20px;
  }
  .search-btn{
-  width: 50px;;
-  height: 20px;
+  width: 60px;;
+  height: 30px;
   margin-left: 16px ;
+ }
+ .language{
+  height: auto; 
+  margin: 1rem auto;
  }
 }

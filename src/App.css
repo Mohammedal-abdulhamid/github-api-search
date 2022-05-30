@@ -3,6 +3,8 @@
    flex-direction: column;
   text-align: center;
   background-color:#5584AC;
+  font-family: Arial, Helvetica, sans-serif;
+  
 }
 * {
     margin:0px;

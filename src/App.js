@@ -11,9 +11,7 @@ function App({ newArray }) {
 			<header className="App-header">
 				<Form  />
 			</header>
-			{/* <main className="App-main">
-				<SearchResult language={newArray} />
-			</main> */}
+			
 			<div>
 				<Footer />
 			</div>
