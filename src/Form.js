@@ -76,7 +76,7 @@ function Form() {
 			</div>
 
 			<div className="result-div">
-				<p id="favorite"> Favorite Languge</p>
+				<p id="favorite"> Favorite Langauge</p>
 				<div className="languageUse">
 					{!userInput ? (
 						<div className="userNotFound ">
